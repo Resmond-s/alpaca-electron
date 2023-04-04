@@ -45,4 +45,4 @@ RUN useradd -m -u 1000 debian
 USER 1000
 
 ENTRYPOINT [ "tini", "--" ]
-CMD [ "bash", "-c", "/alpaca-electron/alpaca-electron --no-sandbox & sleep 5 && while [[ $(ps | grep electron | wc -l) -gt 0 ]]; do sleep 5; done" ]
+CMD [ "bash", "-c", "./alpaca-electron --no-sandbox & sleep 5 && while [[ $(ps | grep electron | wc -l) -gt 0 ]]; do sleep 5; done" ]
